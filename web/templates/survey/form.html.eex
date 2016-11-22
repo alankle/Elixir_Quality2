@@ -1,0 +1,292 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :company, class: "control-label" %>
+    <%= text_input f, :company, class: "form-control" %>
+    <%= error_tag f, :company %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :activities, class: "control-label" %>
+    <%= text_input f, :activities, class: "form-control" %>
+    <%= error_tag f, :activities %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :participants, class: "control-label" %>
+    <%= text_input f, :participants, class: "form-control" %>
+    <%= error_tag f, :participants %>
+  </div>
+
+
+
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#theme1">Planification</a></li>
+  <li><a data-toggle="tab" href="#theme2">Realisation</a></li>
+  <li><a data-toggle="tab" href="#theme3">Contrôle</a></li>
+  <li><a data-toggle="tab" href="#theme4">Amélioration</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="theme1" class="tab-pane fade in active">
+
+      <div class="panel panel-default">
+      <br>
+        <!-- Default panel contents -->
+        <div class="panel-heading">Activités clairement definies </div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes01, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+      </div>
+
+      <div class="panel panel-default">
+      
+      <!-- Default panel contents -->
+        <div class="panel-heading">Dangers et particularités :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes02, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+      </div>
+
+      <div class="panel panel-default">
+      
+       <!-- Default panel contents -->
+        <div class="panel-heading">Documentation à jour :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes03, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+      </div>
+
+     
+  
+  </div>
+  <div id="theme2" class="tab-pane fade">
+    
+    <div class="panel panel-default">
+      <br>
+        <!-- Default panel contents -->
+        <div class="panel-heading">Ressources :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes04, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+      </div>
+
+      <div class="panel panel-default">
+        
+          <!-- Default panel contents -->
+          <div class="panel-heading">Personnel :</div>
+          <div class="panel-body">
+            <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+          </div>
+          
+          <!-- Table -->
+          <table class="table">          
+            <%= inputs_for f, :subthemes05, fn i -> %>
+              <%= render "form_input.html", changeset: @changeset, i: i %>
+            <% end %>
+          </table>
+        </div>
+
+      <div class="panel panel-default">
+        
+          <!-- Default panel contents -->
+          <div class="panel-heading">Planification respectée :</div>
+          <div class="panel-body">
+            <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+          </div>
+          
+          <!-- Table -->
+          <table class="table">          
+            <%= inputs_for f, :subthemes06, fn i -> %>
+              <%= render "form_input.html", changeset: @changeset, i: i %>
+            <% end %>
+          </table>
+      </div>
+
+  </div>
+
+  <div id="theme3" class="tab-pane fade">
+   
+   <div class="panel panel-default">
+      <br>
+        <!-- Default panel contents -->
+        <div class="panel-heading">Auto-contrôles et supervision :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes07, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+      
+        <!-- Default panel contents -->
+        <div class="panel-heading">Résultats conformes  :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes08, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+      
+        <!-- Default panel contents -->
+        <div class="panel-heading">Anomalies, dysfonctionnements,réclamations :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes09, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+     
+        <!-- Default panel contents -->
+        <div class="panel-heading">Importance des écarts point de vue de l'établissement :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes10, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+      
+        <!-- Default panel contents -->
+        <div class="panel-heading">Importance des écarts point de vue client(concerné) :</div>
+        <div class="panel-body">
+          <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+        </div>
+        
+        <!-- Table -->
+        <table class="table">          
+          <%= inputs_for f, :subthemes11, fn i -> %>
+            <%= render "form_input.html", changeset: @changeset, i: i %>
+          <% end %>
+        </table>
+    </div>
+
+  </div>
+
+  <div id="theme4" class="tab-pane fade">
+   
+    <div class="panel panel-default">
+          <br>
+            <!-- Default panel contents -->
+            <div class="panel-heading">Améliorations définies :</div>
+            <div class="panel-body">
+              <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+            </div>
+            
+            <!-- Table -->
+            <table class="table">          
+              <%= inputs_for f, :subthemes12, fn i -> %>
+                <%= render "form_input.html", changeset: @changeset, i: i %>
+              <% end %>
+            </table>
+    </div>
+
+    <div class="panel panel-default">
+        
+            <!-- Default panel contents -->
+            <div class="panel-heading">Améliorations pertinentes :</div>
+            <div class="panel-body">
+              <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+            </div>
+            
+            <!-- Table -->
+            <table class="table">          
+              <%= inputs_for f, :subthemes13, fn i -> %>
+                <%= render "form_input.html", changeset: @changeset, i: i %>
+              <% end %>
+            </table>
+    </div>
+
+    <div class="panel panel-default">
+         
+            <!-- Default panel contents -->
+            <div class="panel-heading">Qualité durable :</div>
+            <div class="panel-body">
+              <p> 1: Rien Exceptionnel  2: Plusieurs 3: La plupart  4: Total 5 :complet</p>
+            </div>
+            
+            <!-- Table -->
+            <table class="table">          
+              <%= inputs_for f, :subthemes14, fn i -> %>
+                <%= render "form_input.html", changeset: @changeset, i: i %>
+              <% end %>
+            </table>
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

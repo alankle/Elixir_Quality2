@@ -1,0 +1,174 @@
+
+<%= render "show_charts.html", total_average: @total_average , themes_average: @themes_average %>
+
+<h2>Survey Performance Report</h2>
+
+<div class="panel panel-default"> 
+    <table class="table"> 
+        <tr>
+         <td> 
+            <ul>
+              <li>
+                <strong>Company:</strong>
+                <%= @survey.company %>
+              </li>
+
+              <li>
+                <strong>Activities:</strong>
+                <%= @survey.activities %>
+              </li>
+
+              <li>
+                <strong>Participants:</strong>
+                <%= @survey.participants %>
+              </li>
+            </ul>
+         </td>  
+         <td>
+           <div id="chart_global_div"></div>                
+          </td> 
+        </tr>
+    </table>           
+</div>
+
+
+
+<div class="panel panel-default">     
+  <!-- Default panel contents -->
+  <div class="panel-heading">Performance globale des activités: (<%= Float.to_string(@total_average, decimals: 2)  %>)</div> 
+  <table class="table"> 
+    <tr colspan="2">
+        <td align="center">
+          <div id="barchart_material" ></div>  
+        </td>    
+    </tr>
+    <tr>
+    <td><b>Planification: </b></td>
+    <td><b><%= Float.to_string(@themes_average.t01, decimals: 2) %></b></td>
+    </tr>
+    <tr>
+    <td><b>Realisation: </b></td>
+    <td><b><%= Float.to_string(@themes_average.t02, decimals: 2)  %></b></td>
+    </tr>
+    <tr>
+    <td><b>Contrôle: </b></td>
+    <td><b><%= Float.to_string(@themes_average.t03, decimals: 2)  %></b></td>
+    </tr>
+    <tr>
+    <td><b>Amélioration: </b></td>
+    <td><b><%= Float.to_string(@themes_average.t04, decimals: 2)  %></b></td>
+    </tr>
+  </table>           
+</div> 
+
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#theme1">Planification</a></li>
+  <li><a data-toggle="tab" href="#theme2">Realisation</a></li>
+  <li><a data-toggle="tab" href="#theme3">Contrôle</a></li>
+  <li><a data-toggle="tab" href="#theme4">Amélioration</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="theme1" class="tab-pane fade in active">
+    <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Activités clairement definies </div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes01 , subthemes_average: @subthemes_average.sb01 %>
+     </div> 
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+          
+            <div class="panel-heading">Dangers et particularités :</div>        
+            <%= render "show_table.html", subthemes: @survey.subthemes02 , subthemes_average: @subthemes_average.sb02 %>
+
+     </div>  
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Documentation à jour :</div>        
+            <%= render "show_table.html", subthemes: @survey.subthemes03 , subthemes_average: @subthemes_average.sb03 %>
+     </div>    
+  </div>
+  <div id="theme2" class="tab-pane fade">
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Ressources :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes04 , subthemes_average: @subthemes_average.sb04 %>
+     </div> 
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Personnel :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes05 , subthemes_average: @subthemes_average.sb05 %>
+     </div> 
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Planification respectée :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes06 , subthemes_average: @subthemes_average.sb06 %>
+     </div> 
+  </div>
+
+  <div id="theme3" class="tab-pane fade">
+    <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Auto-contrôles et supervision :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes07 , subthemes_average: @subthemes_average.sb07 %>
+     </div>
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Résultats conformes  :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes08 , subthemes_average: @subthemes_average.sb08 %>
+     </div> 
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Anomalies, dysfonctionnements,réclamations :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes09 , subthemes_average: @subthemes_average.sb09 %>
+     </div> 
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Importance des écarts point de vue de l'établissement :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes10 , subthemes_average: @subthemes_average.sb10 %>
+     </div> 
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Importance des écarts point de vue client(concerné) :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes11 , subthemes_average: @subthemes_average.sb11 %>
+     </div>  
+
+
+  </div>
+
+  <div id="theme4" class="tab-pane fade">
+    <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Améliorations définies :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes12 , subthemes_average: @subthemes_average.sb12 %>
+     </div>
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Améliorations pertinentes :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes13 , subthemes_average: @subthemes_average.sb13 %>
+     </div>
+     <div class="panel panel-default">     
+            <!-- Default panel contents -->
+            <div class="panel-heading">Qualité durable :</div>            
+
+            <%= render "show_table.html", subthemes: @survey.subthemes14 , subthemes_average: @subthemes_average.sb14 %>
+     </div>  
+
+  </div> 
+
+</div>
+
+<%= link "Edit", to: survey_path(@conn, :edit, @survey) %> | <%= link "Back", to: survey_path(@conn, :index) %>

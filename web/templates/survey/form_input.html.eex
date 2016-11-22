@@ -1,0 +1,12 @@
+<tr class="form-group">
+  <td>
+    <%= label @i, :title, field_value(@i, :title), class: "control-label" %>
+  </td>
+  <td>
+    <%= select @i, :note, 1..5, class: "form-control" %>
+    <%= hidden_input @i, :title, class: "form-control" %>    
+    <%= if message = @i.errors[:note] do %>
+      <span class="help-block"><%= message %></span>
+    <% end %>
+  </td>              
+</tr>

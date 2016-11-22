@@ -1,0 +1,18 @@
+<!-- Table -->
+        <table class="table">   
+          <%= for subtheme <- @subthemes do %> 
+          
+            <tr class="form-group">
+              <td>
+                <%= subtheme.title %>
+              </td>
+              <td>
+                <%= subtheme.note %>
+              </td>              
+            </tr>
+          <% end %>
+          <tr>
+          <td><b>Moyenne: </b></td>
+          <td><b><%= @subthemes_average %></b></td>
+          </tr>
+        </table>

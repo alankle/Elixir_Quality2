@@ -1,0 +1,30 @@
+<h2>Listing surveys</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Activities</th>
+      <th>Participants</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for survey <- @surveys do %>
+    <tr>
+      <td><%= survey.company %></td>
+      <td><%= survey.activities %></td>
+      <td><%= survey.participants %></td>
+
+      <td class="text-right">
+        <%= link "Show Report", to: survey_path(@conn, :show, survey), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: survey_path(@conn, :edit, survey), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: survey_path(@conn, :delete, survey), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New survey", to: survey_path(@conn, :new) %>

@@ -1,0 +1,87 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js">   
+</script>
+
+
+<script type="text/javascript" >
+    google.charts.load('current', {'packages':['gauge', 'bar']});
+
+    google.charts.setOnLoadCallback(drawChartGlobale);     
+
+    google.charts.setOnLoadCallback(drawSort);
+
+    
+
+    function drawChartGlobale() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Label', 'Value'],         
+      ['P.Globale', <%= Float.to_string((@total_average/5)*100, decimals: 2) %>]     
+    ]);
+
+    var options = {
+      width: 400, height: 120,
+
+      redFrom:0, redTo: 40,
+      yellowFrom:40, yellowTo: 80,
+      greenFrom:80, greenTo: 100,
+     
+      minorTicks: 5
+    };
+
+    var chart = new google.visualization.Gauge(document.getElementById('chart_global_div'));
+
+    chart.draw(data, options);
+
+    }
+
+    function drawChartPerformances() {
+        var data = google.visualization.arrayToDataTable([
+              ['Label', 'Value'],         
+              ['Planification', <%= (@themes_average.t01/5)*100 %>],
+              ['Realisation', <%= (@themes_average.t02/5)*100 %>],
+              ['Contrôle', <%= (@themes_average.t03/5)*100 %>],
+              ['Amélioration', <%= (@themes_average.t04/5)*100 %>]
+             
+            ]);
+
+            var options = {
+              width: 400, height: 120,
+            
+              redFrom:0, redTo: 40,
+              yellowFrom:40, yellowTo: 80,
+              greenFrom:80, greenTo: 100,
+             
+              minorTicks: 5
+            };
+
+            var chart = new google.visualization.Gauge(document.getElementById('chart_performances_div'));
+
+            chart.draw(data, options);
+            
+    }
+
+    function drawSort() {
+      var data = google.visualization.arrayToDataTable([
+          ['Performance', 'Moyenne en %'],
+          ['Planification', <%= (@themes_average.t01/5)*100 %>],
+          ['Realisation', <%= (@themes_average.t02/5)*100 %>],
+          ['Contrôle', <%= (@themes_average.t03/5)*100 %>],
+          ['Amélioration', <%= (@themes_average.t04/5)*100 %>]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Planification, Realisation, Contrôle, Amélioration.',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, options);
+}
+
+
+
+</script>
