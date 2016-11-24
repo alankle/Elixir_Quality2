@@ -285,17 +285,17 @@
             <div class="panel-heading">Complete Survey :</div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-xs-6 col-md-4">   
+                <div class="col-md-4">   
                 </div>
                 
-                <div class="col-xs-6 col-md-4">  
+                <div class="col-md-4">  
                   <p >
                     <div class="form-group">
-                    <%= submit "Submit", class: "btn btn-primary" %>
+                    <%= submit "Submit Survey", class: "btn btn-primary" %>
                     </div>
                   </p>
                 </div> 
-                <div class="col-xs-6 col-md-4">   
+                <div class="col-md-4">   
                 </div>
               </div>            
             </div>
