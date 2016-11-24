@@ -62,7 +62,7 @@
 
     function drawSort() {
       var data = google.visualization.arrayToDataTable([
-          ['Performance', 'Moyenne en %'],
+          ['Quality Performance', 'Moyenne en %'],
           ['Planification', <%= (@themes_average.t01/5)*100 %>],
           ['Realisation', <%= (@themes_average.t02/5)*100 %>],
           ['Contrôle', <%= (@themes_average.t03/5)*100 %>],
@@ -71,7 +71,7 @@
 
         var options = {
           chart: {
-            title: 'Company Performance',
+            title: 'Company Performance KPIs',
             subtitle: 'Planification, Realisation, Contrôle, Amélioration.',
           },
           bars: 'horizontal' // Required for Material Bar Charts.

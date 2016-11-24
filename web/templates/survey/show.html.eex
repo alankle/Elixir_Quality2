@@ -48,15 +48,15 @@
     </tr>
     <tr>
     <td><b>Realisation: </b></td>
-    <td><b><%= Float.to_string(@themes_average.t02, decimals: 2)  %><%=Float.to_string((@themes_average.t02/5)*100, decimals: 2)%></b></td>
+    <td><b><%= Float.to_string(@themes_average.t02, decimals: 2)  %> / <%=Float.to_string((@themes_average.t02/5)*100, decimals: 2)%>%</b></td>
     </tr>
     <tr>
     <td><b>Contrôle: </b></td>
-    <td><b><%= Float.to_string(@themes_average.t03, decimals: 2)  %><%=Float.to_string((@themes_average.t03/5)*100, decimals: 2)%></b></td>
+    <td><b><%= Float.to_string(@themes_average.t03, decimals: 2)  %> / <%=Float.to_string((@themes_average.t03/5)*100, decimals: 2)%>%</b></td>
     </tr>
     <tr>
     <td><b>Amélioration: </b></td>
-    <td><b><%= Float.to_string(@themes_average.t04, decimals: 2)  %><%=Float.to_string((@themes_average.t04/5)*100, decimals: 2)%></b></td>
+    <td><b><%= Float.to_string(@themes_average.t04, decimals: 2)  %> / <%=Float.to_string((@themes_average.t04/5)*100, decimals: 2)%>%</b></td>
     </tr>
   </table>           
 </div> 
