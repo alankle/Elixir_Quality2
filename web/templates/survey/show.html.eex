@@ -37,8 +37,8 @@
   <!-- Default panel contents -->
   <div class="panel-heading">Performance globale des activités: <b>(<%= Float.to_string(@total_average, decimals: 2)%> /<%=Float.to_string((@total_average/5)*100, decimals: 2)%>%) </b> </div> 
   <table class="table"> 
-    <tr colspan="2">
-        <td align="center">
+    <tr >
+        <td align="center" colspan="2">
           <div id="barchart_material" style="width: 500px; height: 200px;"></div>  
         </td>    
     </tr>
