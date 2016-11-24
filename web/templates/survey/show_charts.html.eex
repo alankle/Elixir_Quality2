@@ -62,7 +62,7 @@
 
     function drawSort() {
       var data = google.visualization.arrayToDataTable([
-          ['Quality Performance', 'En %'],
+          ['Quality Performance', '%'],
           ['Planification', <%= (@themes_average.t01/5)*100 %>],
           ['Realisation', <%= (@themes_average.t02/5)*100 %>],
           ['Contrôle', <%= (@themes_average.t03/5)*100 %>],
