@@ -3,4 +3,4 @@
 <%= render "form.html", changeset: @changeset,
                         action: survey_path(@conn, :create) %>
 
-<%= link "Back", to: survey_path(@conn, :index) %>
+<%= link "[Home]", to: survey_path(@conn, :index) %>

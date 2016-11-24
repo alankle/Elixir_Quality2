@@ -27,4 +27,4 @@
   </tbody>
 </table>
 
-<%= link "New survey", to: survey_path(@conn, :new) %>
+<%= link "[New survey]", to: survey_path(@conn, :new) %>

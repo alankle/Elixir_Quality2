@@ -171,4 +171,4 @@
 
 </div>
 
-<%= link "Edit", to: survey_path(@conn, :edit, @survey) %> | <%= link "Back", to: survey_path(@conn, :index) %>
+<%= link "[Home]", to: survey_path(@conn, :index) %> | <%= link "[Edit]", to: survey_path(@conn, :edit, @survey) %>
