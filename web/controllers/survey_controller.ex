@@ -5,79 +5,79 @@ defmodule Quality2.SurveyController do
 
   defp init_subthemes(changeset) do
       subthemes01 = [
-          %Subtheme{title: "Toutes les activités à réaliser sont identifiées.", note: 0},
-          %Subtheme{title: "Toutes les activités à réaliser sont identifiées par écrit.", note: 0},
-          %Subtheme{title: "Elles sont planifiées.", note: 0},
-          %Subtheme{title: "Elles sont validées par le responsable.", note: 0} 
+         %Subtheme{title: "Toutes les activités à réaliser sont identifiées.                              ", note: 0},
+         %Subtheme{title: "Toutes les activités à réaliser sont identifiées par écrit.                    ", note: 0},
+         %Subtheme{title: "Elles sont planifiées.                                                         ", note: 0},
+         %Subtheme{title: "Elles sont validées par le responsable.                                        ", note: 0} 
         ]
         subthemes02 = [
-         %Subtheme{title: "Les sources de dangers sont connues.", note: 0},
-          %Subtheme{title: "Les sources de dangers sont identifiées par écrits.", note: 0},
-          %Subtheme{title: "Les mesures à prendre sont clairement définies.", note: 0},
-          %Subtheme{title: "Les mesures à prendre sont identifiées par écrit.", note: 0} 
+         %Subtheme{title: "Les sources de dangers sont connues.                                           ", note: 0},
+         %Subtheme{title: "Les sources de dangers sont identifiées par écrits.                            ", note: 0},
+         %Subtheme{title: "Les mesures à prendre sont clairement définies.                                ", note: 0},
+         %Subtheme{title: "Les mesures à prendre sont identifiées par écrit.                              ", note: 0} 
         ]
         subthemes03 = [
-         %Subtheme{title: "Les documents utilisés correspondent à la réalité.", note: 0},
-         %Subtheme{title: "Les documents sont datés et signés.", note: 0}       
+         %Subtheme{title: "Les documents utilisés correspondent à la réalité.                             ", note: 0},
+         %Subtheme{title: "Les documents sont datés et signés.                                            ", note: 0}       
         ]
         subthemes04 = [
-          %Subtheme{title: "Les ressources nécessaires à la bonne réalisation des tâches sont à disposition.", note: 0},
-          %Subtheme{title: "Elles sont adéquates.", note: 0},
-          %Subtheme{title: "Le matériel est en bon état de fonctionnement", note: 0},
-          %Subtheme{title: "Il ne présente aucun risque.", note: 0},
-          %Subtheme{title: "Les documents de tavail sont disponibles.", note: 0} 
+         %Subtheme{title: "Les ressources nécessaires à la bonne réalisation des tâches sont à disposition.", note: 0},
+         %Subtheme{title: "Elles sont adéquates.                                                           ", note: 0},
+         %Subtheme{title: "Le matériel est en bon état de fonctionnement                                   ", note: 0},
+         %Subtheme{title: "Il ne présente aucun risque.                                                    ", note: 0},
+         %Subtheme{title: "Les documents de tavail sont disponibles.                                       ", note: 0} 
         ]
         subthemes05 = [
-          %Subtheme{title: "Le personnel a la formation et/ou les compétences requises.", note: 0},
-          %Subtheme{title: "En cas de besoin, une formation (interne/externe) est planifiée.", note: 0},
-          %Subtheme{title: "Le personnel connaît les mesures pour éviter les risques.", note: 0},
-          %Subtheme{title: "Le personnel connaît les mesures d'urgences.", note: 0} 
+         %Subtheme{title: "Le personnel a la formation et/ou les compétences requises.                     ", note: 0},
+         %Subtheme{title: "En cas de besoin, une formation (interne/externe) est planifiée.                ", note: 0},
+         %Subtheme{title: "Le personnel connaît les mesures pour éviter les risques.                       ", note: 0},
+         %Subtheme{title: "Le personnel connaît les mesures d'urgences.                                    ", note: 0} 
         ]
         subthemes06 = [
-          %Subtheme{title: "Les documents sont utilisés et remplis intégralement et correctement.", note: 0},
-          %Subtheme{title: "Les instructions sont suivies.", note: 0}        
+         %Subtheme{title: "Les documents sont utilisés et remplis intégralement et correctement.           ", note: 0},
+         %Subtheme{title: "Les instructions sont suivies.                                                  ", note: 0}        
         ]
         subthemes07 = [
-         %Subtheme{title: "Le personnel a contrôlé la conformité des activités réalisées.", note: 0},
-          %Subtheme{title: "Les résultats ont été transmis au responsable.", note: 0},
-          %Subtheme{title: "Le responsable a supervisé les activités réalisée par ses collaborateurs.", note: 0}        
+         %Subtheme{title: "Le personnel a contrôlé la conformité des activités réalisées.                  ", note: 0},
+         %Subtheme{title: "Les résultats ont été transmis au responsable.                                  ", note: 0},
+         %Subtheme{title: "Le responsable a supervisé les activités réalisée par ses collaborateurs.       ", note: 0}        
         ]
         subthemes08 = [
-         %Subtheme{title: "Les résultats correspondent à ce que demande et attend le client (preuves).", note: 0},
-          %Subtheme{title: "Les indicateurs sont conformes (preuves).", note: 0}        
+         %Subtheme{title: "Les résultats correspondent à ce que demande et attend le client (preuves).     ", note: 0},
+         %Subtheme{title: "Les indicateurs sont conformes (preuves).                                       ", note: 0}        
         ]
         subthemes09 = [
-         %Subtheme{title: "Il y a eu des anomalies ou dysfonctionnements mineurs.", note: 0},
-          %Subtheme{title: "Il y a eu des anomalies ou dysfonctionnements importants.", note: 0},
-          %Subtheme{title: "Il y a eu des réclamations verbales par le client (également vérifier chez client).", note: 0},
-          %Subtheme{title: "Il y a eu des réclamations écrites par le client (également vérifier chez client).", note: 0}
+         %Subtheme{title: "Il y a eu des anomalies ou dysfonctionnements mineurs.                          ", note: 0},
+         %Subtheme{title: "Il y a eu des anomalies ou dysfonctionnements importants.                       ", note: 0},
+         %Subtheme{title: "Il y a eu des réclamations verbales par le client (vérifier chez client).       ", note: 0},
+         %Subtheme{title: "Il y a eu des réclamations écrites par le client (vérifier chez client).        ", note: 0}
         ]
         subthemes10 = [
-          %Subtheme{title: "Importance de l'écart entre ce qui est demandé et ce qui est offert? .", note: 0}        
+         %Subtheme{title: "Importance de l'écart entre ce qui est demandé et ce qui est offert? .          ", note: 0}        
         ]
         subthemes11 = [
-          %Subtheme{title: "Importance de l'écart entre ce qui est demandé et ce qui est offert? ", note: 0}        
+         %Subtheme{title: "Importance de l'écart entre ce qui est demandé et ce qui est offert?            ", note: 0}        
         ]
         subthemes12 = [
-         %Subtheme{title: "Les anomalies ou dysfonctionnements sont documentés.", note: 0},
-          %Subtheme{title: "Les anomalies ou dysfonctionnements sont communiquées aux personnes concernées.", note: 0},
-          %Subtheme{title: "La cause de chaque anomalie ou dysfonctionnement a été analysée. ", note: 0},
-          %Subtheme{title: "La cause de chaque anomalie ou dysfonctionnement est connue. ", note: 0},
-          %Subtheme{title: "L'analyse est documentée.", note: 0},
-          %Subtheme{title: "Une décision sur la mise en place ou non de mesures a été prise.", note: 0},
-          %Subtheme{title: "La décision sur la mise en place ou non de mesures est documentée.", note: 0},
-          %Subtheme{title: "Les mesures décidées ont été mise en place. ", note: 0},
+         %Subtheme{title: "Les anomalies ou dysfonctionnements sont documentés.                            ", note: 0},
+         %Subtheme{title: "Les anomalies ou dysfonctionnements sont communiquées aux personnes concernées. ", note: 0},
+         %Subtheme{title: "La cause de chaque anomalie ou dysfonctionnement a été analysée.                ", note: 0},
+         %Subtheme{title: "La cause de chaque anomalie ou dysfonctionnement est connue.                    ", note: 0},
+         %Subtheme{title: "L'analyse est documentée.                                                       ", note: 0},
+         %Subtheme{title: "Une décision sur la mise en place ou non de mesures a été prise.                ", note: 0},
+         %Subtheme{title: "La décision sur la mise en place ou non de mesures est documentée.              ", note: 0},
+         %Subtheme{title: "Les mesures décidées ont été mise en place.                                     ", note: 0},
         ]
         subthemes13 = [
-         %Subtheme{title: "Les causes d'anomalies ou dysfonctionnements ont été éliminés ou sont sous maîtrise (preuves).", note: 0},
-          %Subtheme{title: "L'éfficacité des mesures prises a été vérifiée (preuve).", note: 0},
-          %Subtheme{title: "L'éfficacité des mesures prises est considérée bonne (preuve).", note: 0},
-          %Subtheme{title: "La personne concernée a été informé des mesures prises (preuve).", note: 0},
-          %Subtheme{title: "La personne concernée a approuvée les mesures prises (preuve).", note: 0}
+         %Subtheme{title: "Les causes d'anomalies/dysfonctionnements ont été éliminés/sont sous maîtrise.  ", note: 0},
+         %Subtheme{title: "L'éfficacité des mesures prises a été vérifiée (preuve).                        ", note: 0},
+         %Subtheme{title: "L'éfficacité des mesures prises est considérée bonne (preuve).                  ", note: 0},
+         %Subtheme{title: "La personne concernée a été informé des mesures prises (preuve).                ", note: 0},
+         %Subtheme{title: "La personne concernée a approuvée les mesures prises (preuve).                  ", note: 0}
         ]
         subthemes14 = [
-        %Subtheme{title: "Les situations problématiques ne devraient plus apparaître .", note: 0},
-          %Subtheme{title: "Il n'y a pas de risques pouvant provoquer des conséquences nuisibles.", note: 0}        
+         %Subtheme{title: "Les situations problématiques ne devraient plus apparaître .                    ", note: 0},
+         %Subtheme{title: "Il n'y a pas de risques pouvant provoquer des conséquences nuisibles.           ", note: 0}        
         ]
 
         changeset  
