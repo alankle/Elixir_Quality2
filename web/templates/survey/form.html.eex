@@ -284,16 +284,25 @@
             <!-- Default panel contents -->
             <div class="panel-heading">Complete Survey :</div>
             <div class="panel-body">
-              <div class="form-group">
-              <%= submit "Submit", class: "btn btn-primary" %>
-              </div>
-            </div>          
-            
-    </div>
+              <div class="row">
+                <div class="col-xs-6 col-sm-4">   
+                </div>
+                
+                <div class="col-xs-6 col-sm-4">  
+                  <p align="center">
+                    <div class="form-group">
+                    <%= submit "Submit", class: "btn btn-primary" %>
+                    </div>
+                  </p>
+                </div> 
+                <div class="col-xs-6 col-sm-4">   
+                </div>
+              </div>            
+            </div>
+
+      </div>
 
   </div>
-
-</div>
 
 
 <% end %>
