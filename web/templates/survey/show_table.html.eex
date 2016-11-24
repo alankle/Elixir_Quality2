@@ -13,6 +13,6 @@
           <% end %>
           <tr>
           <td><b>Moyenne: </b></td>
-          <td><b><%= @subthemes_average %></b></td>
+          <td><b><%= Float.to_string(@subthemes_average, decimals: 2)  %></b></td>
           </tr>
         </table>
