@@ -39,7 +39,7 @@
   <table class="table"> 
     <tr colspan="2">
         <td align="center">
-          <div id="barchart_material" ></div>  
+          <div id="barchart_material" style="width: 500px; height: 200px;"></div>  
         </td>    
     </tr>
     <tr>
