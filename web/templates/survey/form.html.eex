@@ -307,7 +307,7 @@ $(document).ready(function(){
     <div class="panel panel-default">
           <br>
             <!-- Default panel contents -->
-            <div class="panel-heading">Complete Survey :</div>
+            <div class="panel-heading">Please, complete your survey :</div>
             <div class="panel-body">
               <div class="row">               
                 
@@ -317,11 +317,11 @@ $(document).ready(function(){
                 <div class="col-xs-4 col-sm-4">  
                   <p>
                     <div class="form-group">
-                    <%= submit "Submit Survey", class: "btn btn-primary" %>
+                    <%= submit "Submit", class: "btn btn-primary" %>
                     </div>
                   </p> 
                 </div>
-                <div class="col-xs-4 col-sm-3">  
+                <div class="col-xs-4 col-sm-4">  
                   
                 </div> 
               </div>            
