@@ -171,4 +171,4 @@
 
 </div>
 
-<%= link "[Home]", to: survey_path(@conn, :index) %> | <%= link "[Edit]", to: survey_path(@conn, :edit, @survey) %>
+<%= link "", to: survey_path(@conn, :index), class: "btn btn-primary glyphicon glyphicon-chevron-left", role: "button" %> <%= link "", to: survey_path(@conn, :edit, @survey), class: "btn btn-primary glyphicon glyphicon-pencil" %>

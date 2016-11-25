@@ -3,4 +3,4 @@
 <%= render "form.html", changeset: @changeset,
                         action: survey_path(@conn, :update, @survey) %>
 
-<%= link "[Back]", to: survey_path(@conn, :index) %>
+<%= link "", to: survey_path(@conn, :index), class: "btn btn-primary glyphicon glyphicon-chevron-left", role: "button" %>

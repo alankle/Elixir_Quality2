@@ -27,4 +27,5 @@
   </tbody>
 </table>
 
-<%= link "[New survey]", to: survey_path(@conn, :new) %>
+<%= link "", to: survey_path(@conn, :new), class: "btn btn-primary glyphicon glyphicon-plus", role: "button" %>
+

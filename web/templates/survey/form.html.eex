@@ -57,7 +57,7 @@ $(document).ready(function(){
   <li><a data-toggle="tab" href="#theme2">2 > Realisation</a></li>
   <li><a data-toggle="tab" href="#theme3">3 > Contrôle</a></li>
   <li><a data-toggle="tab" href="#theme4">4 > Amélioration</a></li>
-  <li><a data-toggle="tab" href="#theme5">[Complete]</a></li>
+  <li><a data-toggle="tab" href="#theme5">Complete</a></li>
 </ul>
 
 <div class="tab-content">
@@ -311,16 +311,19 @@ $(document).ready(function(){
             <div class="panel-body">
               <div class="row">               
                 
-                <div class="col-sm-3 col-md-5">  
+                <div class="col-xs-4 col-sm-5">  
                   
                 </div> 
-                <div class="col-sm-9 col-md-7">  
+                <div class="col-xs-4 col-sm-4">  
                   <p>
                     <div class="form-group">
                     <%= submit "Submit Survey", class: "btn btn-primary" %>
                     </div>
                   </p> 
                 </div>
+                <div class="col-xs-4 col-sm-3">  
+                  
+                </div> 
               </div>            
             </div>
 
@@ -331,4 +334,4 @@ $(document).ready(function(){
 
 <% end %>
 
-<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span >Top</span></a>
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>

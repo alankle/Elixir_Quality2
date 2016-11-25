@@ -5,22 +5,22 @@
 
 <!-- Work row -->
  <div class="row">
-  <div class="col-xs-6 col-sm-4"> 
+  <div class="col-xs-4 col-sm-4"> 
   
   </div>
   
-  <div class="col-xs-6 col-sm-4">  
+  <div class="col-xs-4 col-sm-4">  
   <p align="center">
         <a href="surveys/new">
           <button type="button" class="btn btn-primary btn-lg">
-             <!-- <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> -->
-            Start!
+             <span class="glyphicon glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Start!
+            
           </button>
         </a>      
       </p> 
   </div>
 
-  <div class="col-xs-6 col-sm-4">    
+  <div class="col-xs-4 col-sm-4">    
    
   </div>
    
